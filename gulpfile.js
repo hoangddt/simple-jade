@@ -2,15 +2,18 @@ var gulp = require('gulp'),
     jade = require('gulp-jade');
 
 var paths = {
-  templates: ['develop/*.jade']
+  templates: 'develop/*.jade'
 };
 
 var destinationPath = 'build/';
 
 
 gulp.task('jade', function() {
-  gulp.src(['develop/*.jade'])
-      .pipe(jade())
+  gulp.src('develop/*.jade')
+      .pipe(jade({
+        pretty: true
+      }
+      ))
       .pipe(gulp.dest(destinationPath));
 });
 
@@ -24,7 +27,6 @@ gulp.task('jade', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['jade']);
-  gulp.watch(paths.styles, ['sass']);
 });
 
 gulp.task('develop', ['jade']);
