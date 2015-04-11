@@ -29,6 +29,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.templates, ['jade']);
 });
 
-gulp.task('develop', ['jade']);
+gulp.task('develop', ['jade', 'watch']);
 gulp.task('default', ['develop']);
 
