@@ -1,0 +1,21 @@
+extends common/header
+
+block title
+	| This is Page Title
+
+block headertext
+	| This is header text that has been overrided in index.jade
+
+block content
+	| This is content block also being overrided
+	block content2
+	ul
+		li
+			block title
+		li: a Haha
+		li: a Nothing
+
+	p Why are you dare
+
+block append content2
+	| ... and this is append when extends it. Yolo
