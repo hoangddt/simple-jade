@@ -1,0 +1,10 @@
+include config/config
+include config2
+
+extends common/simplePage
+- var a1 = "Hello from index"
+block append title
+	| #{PageTitle}
+
+block append content
+	| #{a1}

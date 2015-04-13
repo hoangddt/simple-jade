@@ -1,0 +1,12 @@
+
+
+extends common/simplePageTemplate
+
+block content
+	include config
+	include configFolder/configFileInsideFolder
+	ul
+		li: p #{config}
+		li: p #{cfFolder}
+	#{config}
+	p Why that doesn't import????

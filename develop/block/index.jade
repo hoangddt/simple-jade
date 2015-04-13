@@ -8,7 +8,6 @@ block headertext
 
 block content
 	| This is content block also being overrided
-	block content2
 	ul
 		li
 			block title
@@ -16,6 +15,13 @@ block content
 		li: a Nothing
 
 	p Why are you dare
+	h4 This guy below is belong to content2
+//- Use prepend
 
+block prepend content2
+	p Haha I before default
+	ul: li
+
+//- Use append
 block append content2
 	| ... and this is append when extends it. Yolo
